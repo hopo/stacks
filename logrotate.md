@@ -17,3 +17,7 @@
 
 `etc/logrotate.d/`
 + httpd - used to rotate Apache logs
+
+
+### 참고자료
+> http://blog.weirdx.io/post/20441
