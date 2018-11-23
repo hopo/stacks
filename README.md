@@ -1,4 +1,4 @@
 # stacks
 2018-Autumn
 
-[about logrotate](logrotate.md)
+[로그로테이트](logrotate.md)
