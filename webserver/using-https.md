@@ -29,8 +29,8 @@
 + 3개월(90일)마다 갱신을 하여야 한다
 	- 방법1
 		```
-		$ sudo letsencrypt renew`
-		$ sudo service nginx restart`
+		$ sudo letsencrypt renew
+		$ sudo service nginx restart
 		```
 	- 방법2
 		```
