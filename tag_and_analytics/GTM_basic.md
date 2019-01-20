@@ -15,7 +15,7 @@
 	> function() {return document.querySelector('#searchText');}
 	>```
 
-### \# Variables
+### \# Triggers
 + making for fire
 
 ### \# Tags
