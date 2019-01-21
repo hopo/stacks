@@ -40,7 +40,7 @@ ga('require', 'ec');
 
 - - -
 ### 3. setAction
-+ 3-1. Actions (Product and Promotion)
++ Actions (Product and Promotion)
 	- detail
 		* 제품상세봄 
 		* GA-Ec-Shopping-ProductViews
@@ -58,7 +58,20 @@ ga('require', 'ec');
 	- chekcout_option
 	- refund
 	- promo_click 
++ ex) 
+```js
+// purchase
+ga('ec:setAction', 'purchase', {
+  id: 'T12345',
+  affiliation: 'Google Store - Online',
+  revenue: '28.03',
+  tax: '2.14',
+  shipping: '4.00',
+  coupon: 'SUMMER2013'
+});
 
+ga('send', 'pageview');
+```
 - - -
 ### 4. send
 + GA로 데이터 보내기
