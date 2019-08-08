@@ -1,3 +1,5 @@
+## GIT UNDO
+
 [LINK: youtube](https://www.youtube.com/watch?v=3dk3s4LK-Wg&list=PLeo1K3hjS3usJuxZZUBdjAcilgfQHkRzW&index=5)
 
 1) Undo uncommitted changes
@@ -13,3 +15,8 @@ git revert -n
 ```
 git reset
 ```
+
+_desc_
++ origin : upstream(local)
++ remote : 
++ HEAD : current commit(cursor)
