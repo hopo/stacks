@@ -1,0 +1,11 @@
+# contribute
+
+issue hunting
+fork
+clone local
+comment start
+do work
+test
+pr
+modi docs decripbe
+review
