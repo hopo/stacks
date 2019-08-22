@@ -1,0 +1,70 @@
+# prod
+# bongbong.conf
+
+server {
+    listen 80;
+    server_name www.mushroomdance.com;
+    root /var/www/service/factorial;
+    
+     location ^~ /.well-known/acme-challenge/ {
+        allow all;
+    }
+ 
+
+    location /static {
+        alias /var/www/service/factorial/static_files;
+    }
+
+    location /media {
+        alias /var/www/service/factorial/media;
+    }
+
+    location / {
+  #proxy_pass http://localhost:8000;
+  return 301 https://www.mushroomdance.com$request_uri;
+    }
+}
+ 
+
+server {
+    listen  443 ssl http2;
+    server_name www.mushroomdance.com;
+
+    root /var/www/service/factorial/;
+
+    ssl_certificate    "/etc/letsencrypt/live/www.mushroomdance.com/fullchain.pem";
+    ssl_certificate_key "/etc/letsencrypt/live/www.mushroomdance.com/privkey.pem";
+    ssl_dhparam "/etc/ssl/certs/dhparam.pem";
+
+    ssl_ciphers AESGCM:HIGH:!aNULL:!MD5;
+
+    ssl_session_cache shared:SSL:30m;
+    ssl_session_timeout 30m;
+
+    add_header Strict-Transport-Security "max-age=31536000";
+
+    location /static {
+        alias /var/www/service/factorial/static_files;
+    }
+    
+    location ^~ /.well-known/acme-challenge/ {
+        allow all;
+    }
+
+
+    location /media {
+        autoindex on;
+        alias /var/www/service/factorial/media;
+    }
+
+    location / {
+  uwsgi_pass unix:///tmp/uwsgi.sock;
+  include uwsgi_params;
+  #proxy_pass http://localhost:8000;
+    }
+
+}
+server {
+    server_name mushroomdance.com;
+    return 301 https://www.mushroomdance.com$request_uri;
+}
