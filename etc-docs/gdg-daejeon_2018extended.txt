@@ -1,0 +1,101 @@
+#
+#GDG DAEJEON
+meetup
+fb
+slack
+
+
+#
+# 매테리얼 디자인
+# - 신형섭_지란지교 소프트 14:20~
+
+
+!메테리얼 디자인:
+구글의 디자인 시스템, 부트스트랩과 같은 스타일 디자인에서 더욱 확장 개념으로 접근
+현실의 물리적 성질을 담아내려는. ex)카드
+움직임의 속성을 살린다랄까
+
+web: material.io
+web: design labs
+
+매우 정교한 디자인 가이드라인
+
+비교적 커스터마이징을 할 수 있게 material theming
+구글독스 스타일에서 벗어난 디자인을 위해
+
+material design theme editor
+material gallery (zepplin같은?)
+material icon
+material design components(MDC)
+
+!ai/ar/pwa 어플리케이션 디자인
+progressive web application(pwa)
+
+!Inclusive design
+다양성의 철학
+접근성
+
+flutter
+
+
+#
+# Angular Features and New Things
+# - 이상훈_쎄트렉아이
+
+! 앵귤러와 MVC
+
+앵귤로 cli
+Schematics 개념
+
+!웹프로트 엔드 common
+spa를 위한 라우터처리
+입력 폼과 간편한 유효성 검증
+Rxjs 기반 http 통신
+
+!animations
+
+!i8n
+internationalization
+XLIFE 표준 파일 형식 지원
+초언어적 웹서비스 세계
+
+!서버사이드렌더링
+빠른 구동 속도
+검색엔진에 최적화
+사이트 미리보기
+
+!Angular Material & Componet Dev Kit
+다양한 머터리얼 컴포넌트
+CDK를 통한 더 나은 사용자 경험
+
+!ng update <package>
+
+!Tree Shaking 지원
+미사용 모듈 떨어뜨리기
+
+!ivy
+차세대 렌더링 엔진
+빌드 시간과 번들 사이즈를 줄이자
+Tree shaking
+code splititing
+localitty
+
+
+#
+# Android ConstraintLayout Sunflower
+# - Pluu (야놀자)
+
+helper
+layer?
+decorator
+
+
+#
+# TensorFlow: Eager Execution
+# - 전태균 SI Analytics, GDE
+
+!TensorFlow
+A graph execution engines for ML
+
+!Eager Execution
+

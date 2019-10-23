@@ -1,0 +1,51 @@
+
+
+# *** docker
+# ** mysql run
+
+#ref) https://subicura.com/2017/01/19/docker-guide-for-beginners-2.html
+
+# docker options
+-d :detached (background run)
+-p :port connect
+-e :enviroment
+-v :mount connect
+--name :container alias
+
+
+# command
+docker run -d -p 3306:3306 \
+  -e MYSQL_ALLOW_EMPTY_PASSWORD=true \
+  --name mysql \
+  -v /my/own/datadir:/var/lib/mysql \ # <- volume mount
+  mysql:5.7
+
+
+# example
+docker run -d -p 3306:3306 -v /myDocker/var/lib/mysql:/var/lib/mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=true --name mariadb mariadb
+
+
+
+
+
+# =============== mariadb set ===============
+
+# mariadb user
+
+
+// New User (like root) //
+
+>> INSERT INTO mysql.user (user, host, password, ssl_cipher, x509_issuer, x509_subject, authentication_string) VALUES ('hpark', '%', password('park'), '', '', '', '');
+
+>> GRANT ALL PRIVILEGES ON *.* TO 'hpark'@'%';
+
+>> FLUSH PRIVILEGES;
+
+
+
+// DELETE //
+
+DELETE FROM mysql.user WHERE Host='%' AND User='hpark';
+FLUSH PRIVILEGES;
+
+

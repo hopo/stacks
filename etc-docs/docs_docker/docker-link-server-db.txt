@@ -1,0 +1,9 @@
+(running container 'dock-mariadb')
+(make docker image previous. ex:'django-image')
+
+$ docker run -it --restart unless-stopped \
+-p 5555:5000 \
+--link dock-mariadb:dock-mariadb \
+--name django-container \
+django-image \
+python manage.py runserver 0.0.0.0:5000

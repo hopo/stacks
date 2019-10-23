@@ -1,0 +1,6 @@
+# *** 'wine' executable window program
+
+# install packages
+wine(HQ)
+winetricks
+winestaging
