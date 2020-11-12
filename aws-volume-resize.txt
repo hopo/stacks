@@ -1,0 +1,17 @@
+[[ Increase volume of AWS EC2 ]]
+
+1. select ec2 instance
+2. find attached voulme
+3. Actions -> Modify Volume
+4. size up
+
+---
+
+5. connect ec2 shell
+6. linux filesystem expand command
+
+ex)
+"""
+# growpart /dev/xvda 1
+# resize2fs /dev/xvda1
+"""
